@@ -23,10 +23,10 @@ export const baseOptions: BaseLayoutProps = {
   },
 };
 
-export const homeLinks: LinkItemType[] = [
+export const homeLinks = (lang: string): LinkItemType[] => [
   {
     text: "Tutorial",
-    url: "/tutorial",
+    url: `/${lang}/tutorial`,
     active: "nested-url",
   },
 ];
