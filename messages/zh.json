@@ -20,5 +20,11 @@
     "github": "Github",
     "creatorIntro": "你好，👋 我是 {name}，{appName}的作者。在",
     "or": "或"
+  },
+  "metadata": {
+    "appName": "陪读蛙",
+    "appDefaultTitle": "陪读蛙",
+    "appTitleTemplate": "%s | 陪读蛙",
+    "appDescription": "借助 AI，在浏览器中轻松深入掌握多种语言。"
   }
 }

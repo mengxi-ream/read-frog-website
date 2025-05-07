@@ -20,5 +20,11 @@
     "github": "Github",
     "creatorIntro": "Hey Curious 👋 I'm {name}, the creator of {appName}. Follow my work on",
     "or": "or"
+  },
+  "metadata": {
+    "appName": "Read Frog",
+    "appDefaultTitle": "Read Frog",
+    "appTitleTemplate": "%s | Read Frog",
+    "appDescription": "Master languages effortlessly and deeply with AI, right in your browser."
   }
 }

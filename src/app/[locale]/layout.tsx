@@ -1,10 +1,4 @@
-import {
-  APP_DEFAULT_TITLE,
-  APP_DESCRIPTION,
-  APP_NAME,
-  APP_TITLE_TEMPLATE,
-  SITE_PUBLIC_URL,
-} from "@/lib/constants";
+import { SITE_PUBLIC_URL } from "@/lib/constants";
 import "@/styles/global.css";
 import { RootProvider } from "fumadocs-ui/provider";
 import { Inter } from "next/font/google";
@@ -12,6 +6,7 @@ import type { ReactNode } from "react";
 import { Metadata } from "next";
 import { Translations } from "fumadocs-ui/i18n";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
@@ -20,35 +15,44 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_PUBLIC_URL),
-  title: {
-    default: APP_DEFAULT_TITLE,
-    template: APP_TITLE_TEMPLATE,
-  },
-  description: APP_DESCRIPTION,
-  formatDetection: {
-    telephone: false,
-  },
-  openGraph: {
-    type: "website",
-    siteName: APP_NAME,
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const { locale } = params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    metadataBase: new URL(SITE_PUBLIC_URL),
     title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
+      default: t("appDefaultTitle"),
+      template: t("appTitleTemplate"),
     },
-    locale: "en_US",
-    description: APP_DESCRIPTION,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: {
-      default: APP_DEFAULT_TITLE,
-      template: APP_TITLE_TEMPLATE,
+    description: t("appDescription"),
+    formatDetection: {
+      telephone: false,
     },
-    description: APP_DESCRIPTION,
-  },
-};
+    openGraph: {
+      type: "website",
+      siteName: t("appName"),
+      title: {
+        default: t("appDefaultTitle"),
+        template: t("appTitleTemplate"),
+      },
+      locale: locale,
+      description: t("appDescription"),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: {
+        default: t("appDefaultTitle"),
+        template: t("appTitleTemplate"),
+      },
+      description: t("appDescription"),
+    },
+  };
+}
 
 const zh: Partial<Translations> = {
   search: "搜索",
