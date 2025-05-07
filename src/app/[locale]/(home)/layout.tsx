@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { HomeLayout } from "fumadocs-ui/layouts/home";
-import { baseOptions, homeLinks } from "@/app/[lang]/layout.config";
+import { baseOptions, homeLinks } from "@/app/[locale]/layout.config";
 import Footer from "@/components/footer";
 
 export default async function Layout({
@@ -8,13 +8,13 @@ export default async function Layout({
   params,
 }: {
   children: ReactNode;
-  params: Promise<{ lang: string }>;
+  params: Promise<{ locale: string }>;
 }) {
-  const { lang } = await params;
+  const { locale } = await params;
   return (
-    <HomeLayout {...baseOptions} links={homeLinks(lang)} className="pt-0">
+    <HomeLayout {...baseOptions} links={homeLinks(locale)} className="pt-0">
       {children}
-      <Footer />
+      <Footer params={{ locale }} />
     </HomeLayout>
   );
 }

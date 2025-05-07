@@ -1,0 +1,24 @@
+{
+  "home": {
+    "title": "深度学习语言",
+    "subtitle": "借助AI即时翻译和讲解任何网页",
+    "install": "立即安装",
+    "experience": "体验",
+    "aiTranslation": "AI翻译与理解的强大功能",
+    "poweredBy": "由领先的AI模型驱动"
+  },
+  "footer": {
+    "description": "借助AI轻松深入地学习语言。",
+    "copyright": "版权所有 © {year} - 保留所有权利。",
+    "contact": "联系我们",
+    "legal": "法律",
+    "more": "更多",
+    "feedback": "反馈",
+    "businessPartnership": "商务合作",
+    "termsOfService": "服务条款",
+    "privacyPolicy": "隐私政策",
+    "github": "Github",
+    "creatorIntro": "你好，👋 我是 {name}，{appName}的作者。在",
+    "or": "或"
+  }
+}

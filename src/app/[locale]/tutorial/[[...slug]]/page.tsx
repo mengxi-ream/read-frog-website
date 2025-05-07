@@ -12,10 +12,10 @@ import { GithubInfo } from "fumadocs-ui/components/github-info";
 import { Step, Steps } from "fumadocs-ui/components/steps";
 
 export default async function Page(props: {
-  params: Promise<{ slug?: string[]; lang: string }>;
+  params: Promise<{ slug?: string[]; locale: string }>;
 }) {
-  const { slug, lang } = await props.params;
-  const page = source.getPage(slug, lang);
+  const { slug, locale } = await props.params;
+  const page = source.getPage(slug, locale);
   if (!page) notFound();
 
   const MDXContent = page.data.body;
@@ -40,14 +40,14 @@ export default async function Page(props: {
 }
 
 export async function generateStaticParams() {
-  return source.generateParams();
+  return source.generateParams("slug", "locale");
 }
 
 export async function generateMetadata(props: {
-  params: Promise<{ slug?: string[]; lang: string }>;
+  params: Promise<{ slug?: string[]; locale: string }>;
 }) {
-  const { slug, lang } = await props.params;
-  const page = source.getPage(slug, lang);
+  const { slug, locale } = await props.params;
+  const page = source.getPage(slug, locale);
   if (!page) notFound();
 
   return {

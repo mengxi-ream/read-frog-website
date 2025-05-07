@@ -2,17 +2,20 @@
 
 import { ContainerScroll } from "@/components/motion/container-scroll-animation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function Demo() {
+  const t = useTranslations("home");
+
   return (
     <div className="flex flex-col overflow-hidden">
       <ContainerScroll
         titleComponent={
           <>
             <h1 className="text-xl md:text-4xl font-semibold text-black dark:text-white">
-              Experience the power of <br />
-              <span className="text-4xl md:text-[3rem] font-bold leading-none">
-                AI Translation & Understanding
+              {t("experience")} <br />
+              <span className="text-3xl md:text-6xl font-bold leading-none">
+                {t("aiTranslation")}
               </span>
             </h1>
           </>
@@ -29,7 +32,7 @@ export function Demo() {
       </ContainerScroll>
       <div className="text-center pb-8 mb-8">
         <p className="text-gray-600 dark:text-gray-400 mb-4">
-          Powered by leading AI models
+          {t("poweredBy")}
         </p>
         <div className="flex items-center justify-center gap-8">
           <div className="flex items-center gap-2">

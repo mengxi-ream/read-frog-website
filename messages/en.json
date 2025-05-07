@@ -1,0 +1,24 @@
+{
+  "home": {
+    "title": "Learn Languages in Depth",
+    "subtitle": "Translate and understand any webpage instantly with AI assistance",
+    "install": "Install Now",
+    "experience": "Experience the power of",
+    "aiTranslation": "AI Translation & Understanding",
+    "poweredBy": "Powered by leading AI models"
+  },
+  "footer": {
+    "description": "Learn languages deeply and effortlessly with AI.",
+    "copyright": "Copyright © {year} - All rights reserved.",
+    "contact": "Contact",
+    "legal": "Legal",
+    "more": "More",
+    "feedback": "Feedback",
+    "businessPartnership": "Business Partnership",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "github": "Github",
+    "creatorIntro": "Hey Curious 👋 I'm {name}, the creator of {appName}. Follow my work on",
+    "or": "or"
+  }
+}

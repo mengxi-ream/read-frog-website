@@ -2,25 +2,38 @@ import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/cn";
 import { Container } from "@/components/container";
-import { APP_NAME } from "@/lib/constants";
+import { APP_NAME_LOCALE } from "@/lib/constants";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { Locale } from "@/i18n/routing";
 
 const navigation = {
   contact: [
-    { name: "Feedback", href: "mailto:contact@mengxi.work" },
-    { name: "Business Partnership", href: "mailto:contact@mengxi.work" },
+    { name: "feedback", href: "mailto:contact@mengxi.work" },
+    { name: "businessPartnership", href: "mailto:contact@mengxi.work" },
     // {
     //   name: "Discord",
     //   href: "https://www.reddit.com/r/TraceCA/",
     // },
   ],
   legal: [
-    { name: "Terms of Service", href: "/terms-of-service" },
-    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "termsOfService", href: "/terms-of-service" },
+    { name: "privacyPolicy", href: "/privacy-policy" },
   ],
-  more: [{ name: "Github", href: "https://github.com/mengxi-ream/read-frog" }],
+  more: [{ name: "github", href: "https://github.com/mengxi-ream/read-frog" }],
 };
 
-export default function Footer({ className }: { className?: string }) {
+export default function Footer({
+  params,
+  className,
+}: {
+  params: { locale: Locale };
+  className?: string;
+}) {
+  const { locale } = params;
+  setRequestLocale(locale);
+  const t = useTranslations("footer");
+
   return (
     <footer
       className={cn(
@@ -33,10 +46,10 @@ export default function Footer({ className }: { className?: string }) {
           <div className="flex flex-1 flex-col gap-y-2">
             <img src="/logo.png" alt="Read Frog" className="size-8" />
             <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
-              Learn languages deeply and effortlessly with AI.
+              {t("description")}
             </p>
             <p className="text-sm text-zinc-500 dark:text-zinc-500">
-              Copyright &copy; {new Date().getFullYear()} - All rights reserved.
+              {t("copyright", { year: new Date().getFullYear() })}
             </p>
           </div>
 
@@ -44,7 +57,7 @@ export default function Footer({ className }: { className?: string }) {
             {Object.entries(navigation).map(([category, items]) => (
               <div key={category} className="shrink-0">
                 <h3 className="text-sm font-semibold capitalize text-gray-900 dark:text-gray-100">
-                  {category}
+                  {t(category)}
                 </h3>
                 <ul className="mt-4 space-y-2">
                   {items.map((item) => (
@@ -53,7 +66,7 @@ export default function Footer({ className }: { className?: string }) {
                         href={item.href}
                         className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                       >
-                        {item.name}
+                        {t(item.name)}
                       </Link>
                     </li>
                   ))}
@@ -72,8 +85,10 @@ export default function Footer({ className }: { className?: string }) {
             className="rounded-full"
           />
           <p className="text-sm text-gray-600 dark:text-gray-400">
-            Hey Curious 👋 I&apos;m <strong>MengXi</strong>, the creator of{" "}
-            {APP_NAME}. Follow my work on{" "}
+            {t("creatorIntro", {
+              name: "MengXi",
+              appName: APP_NAME_LOCALE[locale],
+            })}{" "}
             <Link
               href="https://x.com/intent/follow?screen_name=mengxi_en"
               target="_blank"
@@ -81,7 +96,7 @@ export default function Footer({ className }: { className?: string }) {
             >
               <strong>X</strong>
             </Link>{" "}
-            or{" "}
+            {t("or")}{" "}
             <Link
               href="https://github.com/mengxi-ream"
               target="_blank"

@@ -9,6 +9,7 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@orama/tokenizers": "^3.1.6",
     "@radix-ui/react-popover": "^1.1.13",
     "class-variance-authority": "^0.7.1",
     "fumadocs-core": "15.2.15",
@@ -17,6 +18,7 @@
     "lucide-react": "^0.507.0",
     "motion": "^12.10.0",
     "next": "15.3.1",
+    "next-intl": "^4.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwind-merge": "^3.2.0"

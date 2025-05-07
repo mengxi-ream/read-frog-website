@@ -11,6 +11,10 @@ import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { Metadata } from "next";
 import { Translations } from "fumadocs-ui/i18n";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,46 +50,59 @@ export const metadata: Metadata = {
   },
 };
 
-const cn: Partial<Translations> = {
-  search: "Translated Content",
+const zh: Partial<Translations> = {
+  search: "搜索",
   // other translations
 };
 
 // available languages that will be displayed on UI
 // make sure `locale` is consistent with your i18n config
-const locales = [
+const localesInUI = [
   {
     name: "English",
     locale: "en",
   },
   {
     name: "Chinese",
-    locale: "cn",
+    locale: "zh",
   },
 ];
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
 export default async function RootLayout({
   params,
   children,
 }: {
-  params: Promise<{ lang: string }>;
+  params: Promise<{ locale: string }>;
   children: ReactNode;
 }) {
-  const { lang } = await params;
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
   return (
-    <html lang={lang} className={inter.className} suppressHydrationWarning>
+    <html lang={locale} className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <RootProvider
-          i18n={{
-            locale: lang,
-            // available languages
-            locales,
-            // translations for UI
-            translations: { cn }[lang],
-          }}
-        >
-          {children}
-        </RootProvider>
+        <NextIntlClientProvider>
+          <RootProvider
+            i18n={{
+              locale,
+              // available languages
+              locales: localesInUI,
+              // translations for UI
+              translations: locale !== "en" ? { zh }[locale] : undefined,
+            }}
+          >
+            {children}
+          </RootProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
