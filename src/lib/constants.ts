@@ -9,3 +9,10 @@ export const APP_NAME_LOCALE = {
   en: "Read Frog",
   zh: "陪读蛙",
 };
+
+export const NAV_ITEMS_LOCALE = {
+  tutorial: {
+    en: "Tutorial",
+    zh: "教程",
+  },
+};
