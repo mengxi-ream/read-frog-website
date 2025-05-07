@@ -1,5 +1,5 @@
 {
   "title": "Read Frog",
-  "pages": ["---Introduction---", "index", "installation"],
+  "pages": ["---Introduction---", "index", "installation", "tool-compare"],
   "root": true
 }

@@ -19,10 +19,10 @@ export function Header() {
         className="relative flex flex-col gap-4 items-center justify-center px-4 pt-14"
       >
         <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-          Be Deep Language Learner
+          Learn Languages in Depth
         </div>
         <div className="font-extralight text-base md:text-2xl dark:text-neutral-200 py-4 text-center">
-          Help you translate and understand any webpage with AI.
+          Translate and understand any webpage instantly with AI assistance
         </div>
         <Link
           href="https://chromewebstore.google.com/detail/read-frog/modkelfkcfjpgbfmnbnllalkiogfofhb?utm_source=official"
