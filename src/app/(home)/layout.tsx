@@ -4,7 +4,7 @@ import { baseOptions, homeLinks } from "@/app/layout.config";
 import Footer from "@/components/footer";
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <HomeLayout {...baseOptions} links={homeLinks}>
+    <HomeLayout {...baseOptions} links={homeLinks} className="pt-0">
       {children}
       <Footer />
     </HomeLayout>

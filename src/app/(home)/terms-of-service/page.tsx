@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfService() {
   return (
-    <article className="prose prose-sm prose-slate mx-auto max-w-3xl px-16 py-8 sm:prose">
+    <article className="prose prose-sm prose-slate mx-auto max-w-3xl px-16 pb-8 pt-22 sm:prose">
       <h2>
         <strong>Terms and Conditions</strong>
       </h2>

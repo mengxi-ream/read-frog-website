@@ -22,15 +22,20 @@ const navigation = {
 
 export default function Footer({ className }: { className?: string }) {
   return (
-    <footer className={cn("border-t bg-zinc-100", className)}>
+    <footer
+      className={cn(
+        "border-t bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800",
+        className
+      )}
+    >
       <Container className="py-16">
         <div className="flex flex-col items-start justify-between gap-x-8 gap-y-8 md:flex-row">
           <div className="flex flex-1 flex-col gap-y-2">
             <img src="/logo.png" alt="Read Frog" className="size-8" />
-            <p className="text-sm font-medium text-zinc-600">
+            <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
               Learn languages deeply and effortlessly with AI.
             </p>
-            <p className="text-sm text-zinc-500">
+            <p className="text-sm text-zinc-500 dark:text-zinc-500">
               Copyright &copy; {new Date().getFullYear()} - All rights reserved.
             </p>
           </div>
@@ -38,7 +43,7 @@ export default function Footer({ className }: { className?: string }) {
           <nav className="flex w-full flex-col justify-between gap-8 sm:flex-row sm:gap-12 md:w-auto">
             {Object.entries(navigation).map(([category, items]) => (
               <div key={category} className="shrink-0">
-                <h3 className="text-sm font-semibold capitalize text-gray-900">
+                <h3 className="text-sm font-semibold capitalize text-gray-900 dark:text-gray-100">
                   {category}
                 </h3>
                 <ul className="mt-4 space-y-2">
@@ -46,7 +51,7 @@ export default function Footer({ className }: { className?: string }) {
                     <li key={item.name}>
                       <Link
                         href={item.href}
-                        className="text-sm text-gray-700 hover:text-gray-900"
+                        className="text-sm text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                       >
                         {item.name}
                       </Link>
@@ -66,13 +71,13 @@ export default function Footer({ className }: { className?: string }) {
             height={28}
             className="rounded-full"
           />
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
             Hey Curious 👋 I&apos;m <strong>MengXi</strong>, the creator of{" "}
             {APP_NAME}. You can follow my work on{" "}
             <Link
               href="https://x.com/intent/follow?screen_name=mengxi_en"
               target="_blank"
-              className="underline"
+              className="underline hover:text-gray-900 dark:hover:text-gray-100"
             >
               <strong>Twitter</strong>
             </Link>{" "}
@@ -80,7 +85,7 @@ export default function Footer({ className }: { className?: string }) {
             <Link
               href="https://github.com/mengxi-ream"
               target="_blank"
-              className="underline"
+              className="underline hover:text-gray-900 dark:hover:text-gray-100"
             >
               <strong>Github</strong>
             </Link>
