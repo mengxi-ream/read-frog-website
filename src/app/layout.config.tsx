@@ -10,6 +10,7 @@ import { GithubInfo } from "fumadocs-ui/components/github-info";
  * Docs Layout: app/docs/layout.tsx
  */
 export const baseOptions: BaseLayoutProps = {
+  githubUrl: "https://github.com/mengxi-ream/read-frog",
   nav: {
     title: (
       <>
