@@ -79,7 +79,7 @@ export default function Footer({ className }: { className?: string }) {
               target="_blank"
               className="underline hover:text-gray-900 dark:hover:text-gray-100"
             >
-              <strong>Twitter</strong>
+              <strong>X</strong>
             </Link>{" "}
             or{" "}
             <Link
