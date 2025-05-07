@@ -27,7 +27,7 @@ export function Demo() {
           draggable={false}
         />
       </ContainerScroll>
-      <div className="text-center">
+      <div className="text-center pb-8 mb-8">
         <p className="text-gray-600 dark:text-gray-400 mb-4">
           Powered by leading AI models
         </p>
