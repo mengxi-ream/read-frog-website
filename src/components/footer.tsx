@@ -1,0 +1,93 @@
+import Image from "next/image";
+import Link from "next/link";
+import { cn } from "@/lib/cn";
+import { Container } from "@/components/container";
+import { APP_NAME } from "@/lib/constants";
+
+const navigation = {
+  contact: [
+    { name: "Feedback", href: "mailto:contact@mengxi.work" },
+    { name: "Business Partnership", href: "mailto:contact@mengxi.work" },
+    // {
+    //   name: "Discord",
+    //   href: "https://www.reddit.com/r/TraceCA/",
+    // },
+  ],
+  legal: [
+    { name: "Terms of Service", href: "/terms-of-service" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+  ],
+  more: [{ name: "Github", href: "https://github.com/mengxi-ream/read-frog" }],
+};
+
+export default function Footer({ className }: { className?: string }) {
+  return (
+    <footer className={cn("border-t bg-zinc-100", className)}>
+      <Container className="py-16">
+        <div className="flex flex-col items-start justify-between gap-x-8 gap-y-8 md:flex-row">
+          <div className="flex flex-1 flex-col gap-y-2">
+            <img src="/logo.png" alt="Read Frog" className="size-8" />
+            <p className="text-sm font-medium text-zinc-600">
+              Learn languages deeply and effortlessly with AI.
+            </p>
+            <p className="text-sm text-zinc-500">
+              Copyright &copy; {new Date().getFullYear()} - All rights reserved.
+            </p>
+          </div>
+
+          <nav className="flex w-full flex-col justify-between gap-8 sm:flex-row sm:gap-12 md:w-auto">
+            {Object.entries(navigation).map(([category, items]) => (
+              <div key={category} className="shrink-0">
+                <h3 className="text-sm font-semibold capitalize text-gray-900">
+                  {category}
+                </h3>
+                <ul className="mt-4 space-y-2">
+                  {items.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="text-sm text-gray-700 hover:text-gray-900"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
+        </div>
+
+        <div className="mt-12 flex items-center gap-x-2">
+          <Image
+            src="/images/mengxi.jpg"
+            alt="MengXi"
+            width={28}
+            height={28}
+            className="rounded-full"
+          />
+          <p className="text-sm text-gray-600">
+            Hey Curious 👋 I&apos;m <strong>MengXi</strong>, the creator of{" "}
+            {APP_NAME}. You can follow my work on{" "}
+            <Link
+              href="https://x.com/intent/follow?screen_name=mengxi_en"
+              target="_blank"
+              className="underline"
+            >
+              <strong>Twitter</strong>
+            </Link>{" "}
+            or{" "}
+            <Link
+              href="https://github.com/mengxi-ream"
+              target="_blank"
+              className="underline"
+            >
+              <strong>Github</strong>
+            </Link>
+            .
+          </p>
+        </div>
+      </Container>
+    </footer>
+  );
+}
