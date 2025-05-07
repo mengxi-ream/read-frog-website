@@ -37,7 +37,7 @@ export default function Footer({
   return (
     <footer
       className={cn(
-        "border-t bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800",
+        "border-t border-zinc-200 bg-zinc-100 dark:bg-zinc-900 dark:border-zinc-800",
         className
       )}
     >

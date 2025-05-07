@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { APP_NAME } from "@/lib/constants";
-import "@/styles/topography.css";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Privacy() {
   return (
-    <article className="prose prose-sm prose-slate mx-auto max-w-3xl px-16 pb-8 pt-22 sm:prose">
+    <article className="prose mx-auto max-w-3xl px-16 pb-8 pt-22">
       <h1>Privacy Policy</h1>
       <p>Last updated: May 07, 2025</p>
       <p>
@@ -409,7 +408,7 @@ export default function Privacy() {
           <p>
             By visiting this page on our website:{" "}
             <a href="https://" rel="external nofollow noopener" target="_blank">
-              https://
+              https://readfrog.mengxi.work
             </a>
           </p>
         </li>

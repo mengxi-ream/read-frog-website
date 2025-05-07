@@ -1,6 +1,5 @@
 import { APP_NAME } from "@/lib/constants";
 import { Metadata } from "next";
-import "@/styles/topography.css";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TermsOfService() {
   return (
-    <article className="prose prose-sm prose-slate mx-auto max-w-3xl px-16 pb-8 pt-22 sm:prose">
+    <article className="prose mx-auto max-w-3xl px-16 pb-8 pt-22">
       <h2>
         <strong>Terms and Conditions</strong>
       </h2>
