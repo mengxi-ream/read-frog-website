@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import React from "react";
-import { AuroraBackground } from "@/components/aurora-background";
+import { AuroraBackground } from "@/components/motion/aurora-background";
 import Link from "next/link";
 
 export function Header() {
