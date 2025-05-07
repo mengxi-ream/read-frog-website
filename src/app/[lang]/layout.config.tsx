@@ -1,6 +1,7 @@
 import type { BaseLayoutProps, LinkItemType } from "fumadocs-ui/layouts/shared";
 import { APP_NAME } from "@/lib/constants";
 import { GithubInfo } from "fumadocs-ui/components/github-info";
+import { i18n } from "@/lib/i18n";
 
 /**
  * Shared layout configurations
@@ -11,6 +12,7 @@ import { GithubInfo } from "fumadocs-ui/components/github-info";
  */
 export const baseOptions: BaseLayoutProps = {
   githubUrl: "https://github.com/mengxi-ream/read-frog",
+  i18n,
   nav: {
     title: (
       <>

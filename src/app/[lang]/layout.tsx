@@ -10,6 +10,7 @@ import { RootProvider } from "fumadocs-ui/provider";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { Metadata } from "next";
+import { Translations } from "fumadocs-ui/i18n";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,11 +46,46 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Layout({ children }: { children: ReactNode }) {
+const cn: Partial<Translations> = {
+  search: "Translated Content",
+  // other translations
+};
+
+// available languages that will be displayed on UI
+// make sure `locale` is consistent with your i18n config
+const locales = [
+  {
+    name: "English",
+    locale: "en",
+  },
+  {
+    name: "Chinese",
+    locale: "cn",
+  },
+];
+
+export default async function RootLayout({
+  params,
+  children,
+}: {
+  params: Promise<{ lang: string }>;
+  children: ReactNode;
+}) {
+  const { lang } = await params;
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <html lang={lang} className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
+        <RootProvider
+          i18n={{
+            locale: lang,
+            // available languages
+            locales,
+            // translations for UI
+            translations: { cn }[lang],
+          }}
+        >
+          {children}
+        </RootProvider>
       </body>
     </html>
   );
