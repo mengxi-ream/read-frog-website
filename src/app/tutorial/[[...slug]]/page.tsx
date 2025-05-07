@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import { getMDXComponents } from "@/mdx-components";
 import { GithubInfo } from "fumadocs-ui/components/github-info";
+import { Step, Steps } from "fumadocs-ui/components/steps";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -29,6 +30,8 @@ export default async function Page(props: {
             // this allows you to link to other pages with relative file paths
             a: createRelativeLink(source, page),
             GithubInfo,
+            Step,
+            Steps,
           })}
         />
       </DocsBody>
