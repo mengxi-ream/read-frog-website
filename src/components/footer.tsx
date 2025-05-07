@@ -73,7 +73,7 @@ export default function Footer({ className }: { className?: string }) {
           />
           <p className="text-sm text-gray-600 dark:text-gray-400">
             Hey Curious 👋 I&apos;m <strong>MengXi</strong>, the creator of{" "}
-            {APP_NAME}. You can follow my work on{" "}
+            {APP_NAME}. Follow my work on{" "}
             <Link
               href="https://x.com/intent/follow?screen_name=mengxi_en"
               target="_blank"
