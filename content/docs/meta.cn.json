@@ -1,5 +1,11 @@
 {
-  "title": "Frog",
-  "pages": ["---Hi---", "index", "installation", "tool-compare", "future-plan"],
+  "title": "陪读蛙",
+  "pages": [
+    "---产品介绍---",
+    "index",
+    "installation",
+    "tool-compare",
+    "future-plan"
+  ],
   "root": true
 }
