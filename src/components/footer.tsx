@@ -9,18 +9,20 @@ import { Locale } from "@/i18n/routing";
 
 const navigation = {
   contact: [
-    { name: "feedback", href: "mailto:contact@mengxi.work" },
+    { name: "feedback", href: "https://wj.qq.com/s2/22031975/aea0/" },
     { name: "businessPartnership", href: "mailto:contact@mengxi.work" },
-    // {
-    //   name: "Discord",
-    //   href: "https://www.reddit.com/r/TraceCA/",
-    // },
   ],
   legal: [
     { name: "termsOfService", href: "/terms-of-service" },
     { name: "privacyPolicy", href: "/privacy-policy" },
   ],
-  more: [{ name: "github", href: "https://github.com/mengxi-ream/read-frog" }],
+  community: [
+    { name: "github", href: "https://github.com/mengxi-ream/read-frog" },
+    {
+      name: "discord",
+      href: "https://discord.gg/nmhvb6u2T7",
+    },
+  ],
 };
 
 export default function Footer({
