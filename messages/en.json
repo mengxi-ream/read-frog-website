@@ -2,7 +2,11 @@
   "home": {
     "title": "Learn Languages in Depth",
     "subtitle": "Translate and understand any webpage instantly with AI assistance",
-    "install": "Install Now",
+    "install": {
+      "on": "Install on",
+      "chrome": "Chrome Browser",
+      "edge": "Edge Browser"
+    },
     "experience": "Experience the power of",
     "aiTranslation": "AI Translation & Understanding",
     "poweredBy": "Powered by leading AI models"

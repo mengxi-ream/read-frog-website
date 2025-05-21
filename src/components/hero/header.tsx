@@ -27,15 +27,63 @@ export function Header() {
         <div className="font-extralight text-base md:text-2xl dark:text-neutral-200 py-4 text-center">
           {t("subtitle")}
         </div>
-        <Link
+        <Install />
+      </motion.div>
+    </AuroraBackground>
+  );
+}
+
+function Install() {
+  const t = useTranslations("home");
+  return (
+    <div className="mt-6">
+      <div className="text-center mb-4 font-light text-sm text-neutral-500 dark:text-neutral-400">
+        {t("install.on")}
+      </div>
+      <div className="flex items-center gap-4">
+        <InstallLink
+          href="https://chromewebstore.google.com/detail/read-frog/modkelfkcfjpgbfmnbnllalkiogfofhb?utm_source=official"
+          icon="/images/icons/chrome.png"
+        >
+          {t("install.chrome")}
+        </InstallLink>
+        <InstallLink
+          href="https://microsoftedge.microsoft.com/addons/detail/read-frog-open-source-a/cbcbomlgikfbdnoaohcjfledcoklcjbo"
+          icon="/images/icons/edge.png"
+        >
+          {t("install.edge")}
+        </InstallLink>
+
+        {/* <Link
           href="https://chromewebstore.google.com/detail/read-frog/modkelfkcfjpgbfmnbnllalkiogfofhb?utm_source=official"
           target="_blank"
           className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2 flex items-center gap-2"
         >
           <img src="/images/icons/chrome.png" alt="Chrome" className="size-5" />
           {t("install")}
-        </Link>
-      </motion.div>
-    </AuroraBackground>
+        </Link> */}
+      </div>
+    </div>
+  );
+}
+
+function InstallLink({
+  href,
+  icon,
+  children,
+}: {
+  href: string;
+  icon: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      target="_blank"
+      className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2 flex items-center gap-2"
+    >
+      <img src={icon} alt={icon} className="size-5" />
+      {children}
+    </Link>
   );
 }

@@ -2,7 +2,11 @@
   "home": {
     "title": "深度学习语言",
     "subtitle": "借助 AI 即时翻译和讲解任何网页",
-    "install": "立即安装",
+    "install": {
+      "on": "安装在",
+      "chrome": "Chrome 浏览器",
+      "edge": "Edge 浏览器"
+    },
     "experience": "体验",
     "aiTranslation": "AI翻译与理解的强大功能",
     "poweredBy": "由领先的AI模型驱动"
