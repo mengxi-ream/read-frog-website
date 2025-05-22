@@ -4,8 +4,8 @@
     "subtitle": "借助 AI 即时翻译和讲解任何网页",
     "install": {
       "on": "安装在",
-      "chrome": "Chrome 浏览器",
-      "edge": "Edge 浏览器"
+      "chrome": "Chrome",
+      "edge": "Edge"
     },
     "experience": "体验",
     "aiTranslation": "AI翻译与理解的强大功能",
