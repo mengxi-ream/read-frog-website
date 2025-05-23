@@ -17,13 +17,14 @@ import {
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 export default function Step1Page() {
   const t = useTranslations();
   const [targetLanguage, updateTargetLanguage] = useExtensionTargetLanguage();
   return (
     <div className="bg-background grid grid-cols-2 h-[100vh]">
-      <div className="border-r p-8 flex flex-col gap-4 justify-center">
+      <div className="border-r p-8 lg:p-16 xl:p-30 flex flex-col gap-4 justify-center">
         <h1 className="text-2xl font-bold">{t("guide.step1.title")}</h1>
         <p className="text-sm text-muted-foreground">
           {t("guide.step1.description")}
@@ -53,7 +54,9 @@ export default function Step1Page() {
         </Select>
         <div className="mt-6">
           <Button asChild>
-            <Link href="/guide/step-2">Continue</Link>
+            <Link href="/guide/step-2">
+              Continue <ArrowRight />
+            </Link>
           </Button>
         </div>
       </div>

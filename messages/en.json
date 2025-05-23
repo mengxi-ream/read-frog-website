@@ -33,6 +33,14 @@
       "title": "🎉 You are almost there! Set your native language",
       "description": "You have successfully installed Read Frog extension. With just a few steps, you are ready to start your language learning journey.",
       "nativeLanguage": "Native language"
+    },
+    "step2": {
+      "title": "Pin Read Frog extension icon",
+      "description": "The Read Frog extension icon provides the main functionality and configuration of the extension. Please refer to the example image and pin the extension to continue.",
+      "hint": {
+        "pinned": "You can continue to the next step now.",
+        "unpinned": "Hint: Please pin the extension to continue the next step!"
+      }
     }
   },
   "language": {
