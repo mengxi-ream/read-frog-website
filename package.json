@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev --turbo",
-    "start": "next start",
+    "dev": "next dev --turbo -p 8888",
+    "start": "next start -p 8888",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
@@ -21,7 +21,8 @@
     "next-intl": "^4.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwind-merge": "^3.2.0"
+    "tailwind-merge": "^3.2.0",
+    "zod": "^3.25.23"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.5",
