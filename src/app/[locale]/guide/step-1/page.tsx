@@ -8,7 +8,7 @@ import {
   SelectContent,
   SelectItem,
 } from "@/components/shadcn/select";
-import { useExtensionTargetLanguage } from "@/hooks/useSetTargetLanguage";
+import { useInitTargetLanguage } from "@/hooks/useInitTargetLanguage";
 import {
   langCodeISO6393Schema,
   LangCodeISO6393,
@@ -21,7 +21,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Step1Page() {
   const t = useTranslations();
-  const [targetLanguage, updateTargetLanguage] = useExtensionTargetLanguage();
+  const [targetLanguage, updateTargetLanguage] = useInitTargetLanguage();
   return (
     <div className="bg-background grid grid-cols-2 h-[100vh]">
       <div className="border-r p-8 lg:p-16 xl:p-30 flex flex-col gap-4 justify-center">

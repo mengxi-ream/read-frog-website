@@ -4,7 +4,7 @@ import { LangCodeISO6393, LOCALE_TO_ISO6393 } from "@/types/languages";
 import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 
-export function useExtensionTargetLanguage(): [
+export function useInitTargetLanguage(): [
   LangCodeISO6393 | undefined,
   (langCodeISO6393: LangCodeISO6393) => void
 ] {

@@ -35,11 +35,19 @@
       "nativeLanguage": "Native language"
     },
     "step2": {
-      "title": "Pin Read Frog extension icon",
+      "title": "📌 Pin Read Frog extension icon",
       "description": "The Read Frog extension icon provides the main functionality and configuration of the extension. Please refer to the example image and pin the extension to continue.",
       "hint": {
         "pinned": "You can continue to the next step now.",
         "unpinned": "Hint: Please pin the extension to continue the next step!"
+      }
+    },
+    "step3": {
+      "title": "🌐 Try to translate the right side page",
+      "description": "Click the Read Frog extension icon, then click the \"Translate\" button.",
+      "hint": {
+        "translated": "You can continue to the next step now.",
+        "notTranslated": "Hint: You can continue after translation."
       }
     }
   },
