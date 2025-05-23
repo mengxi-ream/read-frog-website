@@ -4,10 +4,13 @@ import { LangCodeISO6393, LOCALE_TO_ISO6393 } from "@/types/languages";
 import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 
-export function useExtensionTargetLanguage() {
-  const [targetLanguage, setTargetLanguage] = useState<LangCodeISO6393 | null>(
-    null
-  );
+export function useExtensionTargetLanguage(): [
+  LangCodeISO6393 | undefined,
+  (langCodeISO6393: LangCodeISO6393) => void
+] {
+  const [targetLanguage, setTargetLanguage] = useState<
+    LangCodeISO6393 | undefined
+  >(undefined);
   const locale = useLocale();
 
   useEffect(() => {
@@ -29,5 +32,5 @@ export function useExtensionTargetLanguage() {
     setTargetLanguage(langCodeISO6393);
   };
 
-  return targetLanguage;
+  return [targetLanguage, updateTargetLanguage];
 }
