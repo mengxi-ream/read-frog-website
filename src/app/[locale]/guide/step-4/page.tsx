@@ -37,7 +37,7 @@ export default function GuidePage() {
       <div className="p-8 flex justify-center items-center">
         <div>
           <Image
-            src="/images/demo.png"
+            src="/images/step-4.png"
             alt="Guide Step 1"
             width={600}
             height={600}
