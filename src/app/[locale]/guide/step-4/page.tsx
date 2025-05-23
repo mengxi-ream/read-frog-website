@@ -37,8 +37,8 @@ export default function GuidePage() {
       <div className="p-8 flex justify-center items-center">
         <div>
           <Image
-            src="/images/step-4.png"
-            alt="Guide Step 1"
+            src="/images/guide/step-4.png"
+            alt="Guide Step 4"
             width={600}
             height={600}
             className="rounded-lg shadow-lg"
