@@ -29,8 +29,10 @@
     "appDescription": "Master languages effortlessly and deeply with AI, right in your browser."
   },
   "guide": {
+    "continue": "Continue",
+    "finish": "Finish",
     "step1": {
-      "title": "🎉 You are almost there! Set your native language",
+      "title": "👋 You are almost there! Set your native language",
       "description": "You have successfully installed Read Frog extension. With just a few steps, you are ready to start your language learning journey.",
       "nativeLanguage": "Native language"
     },
@@ -49,6 +51,12 @@
         "translated": "You can continue to the next step now.",
         "notTranslated": "Hint: You can continue after translation."
       }
+    },
+    "step4": {
+      "title": "🎉 You are ready to go!",
+      "description": "You have already mastered the basic functions of the companion frog! If you want to activate more advanced features, please use the tutorial below for configuration.",
+      "tutorial": "Advanced Tutorial",
+      "hint": "Hint: You need to set API Key to activate more advanced features."
     }
   },
   "language": {

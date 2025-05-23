@@ -63,12 +63,12 @@ export default function GuidePage() {
           {hasTranslated === true ? (
             <Button asChild disabled>
               <Link href="/guide/step-4">
-                Continue <ArrowRight />
+                {t("guide.continue")} <ArrowRight />
               </Link>
             </Button>
           ) : (
             <Button disabled>
-              Continue <ArrowRight />
+              {t("guide.continue")} <ArrowRight />
             </Button>
           )}
           <div className="text-xs text-muted-foreground mt-2">

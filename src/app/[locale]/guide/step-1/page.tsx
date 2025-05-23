@@ -55,7 +55,7 @@ export default function Step1Page() {
         <div className="mt-6">
           <Button asChild>
             <Link href="/guide/step-2">
-              Continue <ArrowRight />
+              {t("guide.continue")} <ArrowRight />
             </Link>
           </Button>
         </div>

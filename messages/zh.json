@@ -29,8 +29,10 @@
     "appDescription": "借助 AI，在浏览器中轻松深入掌握多种语言。"
   },
   "guide": {
+    "continue": "继续",
+    "finish": "完成",
     "step1": {
-      "title": "🎉 就差一点啦！设置你的母语",
+      "title": "👋 就差一点啦！设置你的母语",
       "description": "你已经成功安装了陪读蛙扩展。只需几步，你就可以开始你的语言学习之旅。",
       "nativeLanguage": "母语"
     },
@@ -49,6 +51,12 @@
         "translated": "现在可以进行下一步了。",
         "notTranslated": "提示：请翻译完网页后继续下一步哦！"
       }
+    },
+    "step4": {
+      "title": "🎉 你已经准备好了！",
+      "description": "你已经掌握了陪读蛙的基础使用功能！如果你想要激活更多高级功能，请使用下面的教程进行配置。",
+      "tutorial": "高级教程",
+      "hint": "提示：你需要设置 API Key 才能激活更多高级功能。"
     }
   },
   "language": {
