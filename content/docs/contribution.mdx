@@ -36,3 +36,14 @@ Create a Pull Request and wait for it to be merged.
 ## Commit Convention
 
 We use the [Conventional Commits](https://www.conventionalcommits.org/) specification for writing commit messages.
+
+
+## Notes
+
+If you are a contributor from mainland China, when you need to push code, use the following command:
+
+```powershell
+$env:SKIP_FREE_API = "true"; git push origin your-branch
+```
+
+Why is this necessary? Because code tests are performed during the push process, but Google's free API is inaccessible in mainland China. This would cause the tests to fail and the push to be rejected. By setting the `SKIP_FREE_API` environment variable, we skip the Google tests.
