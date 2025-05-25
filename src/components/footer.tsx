@@ -92,7 +92,7 @@ export default function Footer({
               appName: APP_NAME_LOCALE[locale],
             })}{" "}
             <Link
-              href="https://x.com/intent/follow?screen_name=mengxi_en"
+              href="https://x.com/intent/follow?screen_name=mengxi_ream"
               target="_blank"
               className="underline hover:text-gray-900 dark:hover:text-gray-100"
             >
