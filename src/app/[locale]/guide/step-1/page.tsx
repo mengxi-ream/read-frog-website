@@ -59,6 +59,12 @@ export default function Step1Page() {
             </Link>
           </Button>
         </div>
+        <Link
+          className="text-muted-foreground text-sm mt-6"
+          href="/guide/step-2"
+        >
+          {t("guide.skip")}
+        </Link>
       </div>
       <div className="p-8 flex justify-center items-center">
         <div className="max-w-[300px]">

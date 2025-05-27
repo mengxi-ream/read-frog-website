@@ -35,6 +35,7 @@
   "guide": {
     "continue": "Continue",
     "finish": "Finish",
+    "skip": "Skip",
     "step1": {
       "title": "👋 You are almost there! Set your native language",
       "description": "You have successfully installed Read Frog extension. With just a few steps, you are ready to start your language learning journey.",

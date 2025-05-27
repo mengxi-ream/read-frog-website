@@ -77,6 +77,12 @@ export default function GuidePage() {
               : t("guide.step3.hint.notTranslated")}
           </div>
         </div>
+        <Link
+          className="text-muted-foreground text-sm mt-6"
+          href="/guide/step-4"
+        >
+          {t("guide.skip")}
+        </Link>
       </div>
       <div className="p-8 flex justify-center items-center">
         {targetLanguage && (

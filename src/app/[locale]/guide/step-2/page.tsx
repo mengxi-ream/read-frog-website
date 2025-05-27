@@ -35,6 +35,12 @@ export default function GuidePage() {
               : t("guide.step2.hint.unpinned")}
           </div>
         </div>
+        <Link
+          className="text-muted-foreground text-sm mt-6"
+          href="/guide/step-3"
+        >
+          {t("guide.skip")}
+        </Link>
       </div>
       <div className="p-8 flex justify-center items-center">
         <div>
