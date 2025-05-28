@@ -61,7 +61,7 @@ export default function GuidePage() {
         />
         <div className="mt-6">
           {hasTranslated === true ? (
-            <Button asChild disabled>
+            <Button asChild className="read-frog-notranslate">
               <Link href="/guide/step-4">
                 {t("guide.continue")} <ArrowRight />
               </Link>
