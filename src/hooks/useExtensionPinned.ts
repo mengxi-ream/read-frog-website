@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export function useExtensionPinned() {
-  const [isPinned, setIsPinned] = useState<boolean | null>(null);
+  const [isPinned, setIsPinned] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
     function handler(ev: MessageEvent) {
@@ -22,5 +22,5 @@ export function useExtensionPinned() {
     return () => window.removeEventListener("message", handler);
   }, []);
 
-  return isPinned; // null＝未知，true/false＝已知
+  return isPinned; // undefined＝未知，true/false＝已知
 }
