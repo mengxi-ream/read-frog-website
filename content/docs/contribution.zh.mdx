@@ -47,8 +47,8 @@ git checkout -b fix/the-bug
 
 如果你是中国大陆贡献者，那么当你要 push 代码的时候你得用
 
-```powershell
-$env:SKIP_FREE_API = "true"; git push origin your-branch
+```bash
+SKIP_FREE_API=true git push
 ```
 
 为什么要这样做呢？因为在你 push 代码的时候会做代码测试，但是谷歌的免费 API 在国内无法访问，这会导致测试失败，从而 push 失败，我们通过设置 `SKIP_FREE_API` 环境变量来跳过谷歌测试。
